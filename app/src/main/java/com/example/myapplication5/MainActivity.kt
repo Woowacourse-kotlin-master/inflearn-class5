@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         // 1. 네비게이션 만들기
 
-        // 2. Fragment 만들고 연결하기
+        // 2. Fragment 만들고 연결하기 - Fragment에서 버튼 누르면 이동하기
 
         // 3. 리사이클 뷰 만들기
     }
