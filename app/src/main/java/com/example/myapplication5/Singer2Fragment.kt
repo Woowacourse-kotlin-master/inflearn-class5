@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.bokchi.trot_list.RVAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,7 +36,18 @@ class Singer2Fragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_singer2, container, false)
 
-        /*        view.findViewById<ImageView>(R.id.image1).setOnClickListener {  }*/
+
+        val items = mutableListOf<String>()
+        items.add("디그다코")
+        items.add("디그다코")
+        items.add("닥트코")
+        items.add("닥트코")
+
+        val rv = view.findViewById<RecyclerView>(R.id.singRV)
+        val rvAdapter = RVAdapter(items)
+
+        rv.adapter = rvAdapter
+        rv.layoutManager= LinearLayoutManager(context)
 
         val image1 = view.findViewById<ImageView>(R.id.image1)
 
